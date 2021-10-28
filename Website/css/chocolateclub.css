@@ -1,0 +1,649 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #ebe3d9;
+  font-family: "Sofia Pro"; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+
+li {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.link {
+  text-decoration: none;
+  color: #3b1e0c; }
+
+.header {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%; }
+
+.logo {
+  width: 100%;
+  height: 100%;
+  padding-right: 2%; }
+
+.logo_link {
+  width: 50%; }
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  /* bliver stående */
+  z-index: 1;
+  /* Gør at overlay er over alt indhold*/
+  left: 0;
+  top: 0;
+  background-color: rgba(68, 37, 18, 0.9);
+  /* gennemsigtig brun */
+  overflow-x: hidden;
+  /* gør man ikke kan scroll */
+  transition: 0.5s;
+  /* tiden på animation */ }
+
+/* position af indhold */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Futura PT";
+  font-weight: 100; }
+
+/* styling af skrift på overlay*/
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #ebe3d9;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover {
+  color: #cebba6;
+  text-decoration: none; }
+
+/* position af luk knappen*/
+.closebtn a {
+  position: absolute;
+  font-size: 60px; }
+
+.closebtn {
+  text-align: center; }
+
+/*# sourceMappingURL=overlaystyle.css.map */
+.hamburgerMenu a {
+  color: #3b1e0c; }
+
+.mobil_header {
+  margin-top: 23%;
+  margin-left: 5%; }
+
+.computer {
+  display: none; }
+
+.amalie {
+  background-color: #cebba6;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  margin-top: 4%; }
+
+.border {
+  border: 2px solid #3b1919; }
+
+.abillede {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  width: 70%; }
+
+.anavn {
+  color: #3b1919;
+  font-family: "Futura PT";
+  font-size: 20pt;
+  padding-top: 4%;
+  font-weight: 100; }
+
+.atekst {
+  color: #3b1919;
+  font-size: 10pt;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  line-height: 18px; }
+
+.CTA {
+  background-color: #500a0b;
+  width: 55%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4%;
+  color: #ebe3d9;
+  font-size: 10pt;
+  padding: 3% 0 3% 0; }
+
+.personlogo {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: 20%;
+  margin-right: auto;
+  padding-top: 4%;
+  padding-bottom: 4%; }
+
+.tobias {
+  background-color: #cebba6;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  margin-top: 5%; }
+
+.tbillede {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  width: 70%; }
+
+.tnavn {
+  color: #3b1919;
+  font-family: "Futura PT";
+  font-size: 20pt;
+  padding-top: 3%;
+  font-weight: 100; }
+
+.ttekst {
+  color: #3b1919;
+  font-size: 10pt;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  line-height: 18px; }
+
+.frederik {
+  background-color: #cebba6;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  margin-top: 5%; }
+
+.fbillede {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  width: 70%; }
+
+.fnavn {
+  color: #3b1919;
+  font-family: "Futura PT";
+  font-size: 20pt;
+  padding: 3%;
+  font-weight: 100; }
+
+.ftekst {
+  color: #3b1919;
+  font-size: 10pt;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 18px; }
+
+.boverskrift {
+  width: 65%;
+  height: auto;
+  background-color: #cebba6;
+  color: #3b1e0c;
+  font-size: 18pt;
+  border-radius: 4px;
+  text-align: center;
+  margin: 10% auto 0 auto;
+  padding: 12px 0 10px 0; }
+
+.nummer {
+  width: 40%;
+  display: block;
+  margin: 70px auto 0 auto; }
+
+.et {
+  margin-top: 10%; }
+
+.b_overskrift {
+  color: #3b1e0c;
+  font-size: 19pt;
+  display: block;
+  text-align: center;
+  margin-top: 2%;
+  font-weight: 700;
+  padding-top: 3%; }
+
+.b_tekst {
+  color: #3b1e0c;
+  text-align: center;
+  width: 200px;
+  margin: 3% auto 0 auto;
+  font-size: 12pt;
+  line-height: 22px; }
+
+.b_cta {
+  color: #4f0001;
+  margin: 3% auto 0 auto;
+  font-size: 14pt;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 5%; }
+
+.pil {
+  -webkit-transform: rotate(90deg);
+  width: 100px;
+  margin: 80px auto 0 auto; }
+
+.some_web {
+  display: none; }
+
+.footer_mobil {
+  width: 100%;
+  height: auto;
+  background-color: #cebba6;
+  border-top: 5px solid #3b1e0c;
+  margin-top: 20%;
+  padding-top: 5%;
+  text-align: center;
+  color: #3b1e0c; }
+
+.footer_web {
+  display: none; }
+
+.opentime {
+  font-weight: 600; }
+
+.adress {
+  padding-top: 5%; }
+
+.adresset {
+  font-weight: 600; }
+
+.mellemrum {
+  padding-top: 1%; }
+
+.tlf {
+  padding-top: 5%; }
+
+.tlft {
+  font-weight: 600; }
+
+.email {
+  padding-top: 5%; }
+
+.emailt {
+  font-weight: 600; }
+
+.some {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 24pt; }
+
+@media screen and (min-width: 768px) {
+  .border {
+    border: 3px solid #3b1919; }
+
+  .anavn {
+    font-size: 40pt;
+    padding-top: 3%; }
+
+  .atekst {
+    font-size: 18pt;
+    width: 450px;
+    line-height: 30px; }
+
+  .CTA {
+    font-size: 20pt; }
+
+  .tnavn {
+    font-size: 40pt; }
+
+  .ttekst {
+    font-size: 18pt;
+    width: 450px;
+    line-height: 30px; }
+
+  .fnavn {
+    font-size: 40pt; }
+
+  .ftekst {
+    font-size: 18pt;
+    width: 450px;
+    line-height: 30px; }
+
+  .boverskrift {
+    width: 52%;
+    font-size: 30pt;
+    padding: 20px 0 10px 0;
+    border-radius: 8px; }
+
+  .b_overskrift {
+    font-size: 25pt;
+    padding-top: 1%; }
+
+  .nummer {
+    width: 30%;
+    display: block;
+    margin: 70px auto 0 auto; }
+
+  .b_tekst {
+    width: 250px;
+    margin: 2% auto 0 auto;
+    font-size: 16pt;
+    line-height: 28px; }
+
+  .b_cta {
+    font-size: 18pt;
+    padding-top: 1%; }
+
+  .pil {
+    -webkit-transform: rotate(90deg);
+    width: 100px;
+    margin: 80px auto 0 auto; }
+
+  .some_web {
+    display: none; }
+
+  .open, .adress, .tlf, .email {
+    font-size: 18pt; }
+
+  .some {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 35pt; } }
+@media screen and (min-width: 1200px) {
+  .logo {
+    width: 400px;
+    height: auto;
+    margin-left: 0; }
+
+  .header {
+    justify-content: center;
+    padding-right: 5%;
+    margin-top: 1%;
+    margin-left: 4%; }
+
+  .menu:hover {
+    width: 150px;
+    height: 240px;
+    background-color: #cebba6;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 120px;
+    margin-top: -120px; }
+
+  .menubar {
+    width: 100%;
+    margin-top: 150px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 5%;
+    font-size: 14pt;
+    font-weight: 600; }
+
+  .nav {
+    width: 80%; }
+
+  .nav li a {
+    text-decoration: none;
+    color: #3b1e0c; }
+
+  .computer {
+    display: inline; }
+
+  .mobil_header {
+    display: none; }
+
+  .cc_baggrund {
+    background-color: #cebba6;
+    width: 210px;
+    height: 240px;
+    padding-top: 115px;
+    border-radius: 4px; }
+
+  .dropbtn {
+    background-color: #ebe3d9;
+    color: #3b1e0c;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    height: 250px;
+    padding: auto 0 auto 0;
+    margin-top: -150px;
+    font-size: 14pt;
+    font-weight: 600; }
+
+  .anledning {
+    width: 180px; }
+
+  .dropdown {
+    position: relative;
+    display: inline-block; }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cebba6;
+    min-width: 220px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-weight: 100;
+    font-family: "Futura PT"; }
+
+  .dropdown-content a {
+    color: #500a0b;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px; }
+
+  .dropdown-content a:hover {
+    background-color: #ebe3d9; }
+
+  .dropdown:hover .dropdown-content {
+    display: block; }
+
+  .dropdown:hover .dropbtn {
+    background-color: #cebba6; }
+
+  .amalie {
+    padding: 1%;
+    margin-top: 2%; }
+
+  .web_person_boks {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around; }
+
+  .abillede {
+    width: 600px;
+    height: auto;
+    margin: 0 0 0 0;
+    padding: 2% 0 2% 0; }
+
+  .anavn {
+    font-size: 40pt;
+    padding-top: 10%; }
+
+  .atekst {
+    font-size: 14pt;
+    width: 500px;
+    line-height: 26px; }
+
+  .CTA {
+    width: 350px;
+    height: 50px;
+    font-size: 18pt;
+    padding-top: 3%; }
+
+  .personlogo {
+    width: 300px;
+    margin-left: 15%; }
+
+  .tobias {
+    padding: 1%; }
+
+  .tbillede {
+    width: 600px;
+    height: auto;
+    margin: 0 0 0 0;
+    padding: 2% 0 2% 0; }
+
+  .tnavn {
+    font-size: 40pt;
+    padding-top: 10%; }
+
+  .ttekst {
+    font-size: 14pt;
+    width: 500px;
+    line-height: 26px; }
+
+  .frederik {
+    padding: 1%; }
+
+  .fbillede {
+    width: 600px;
+    height: auto;
+    margin: 0 0 0 0;
+    padding: 2% 0 2% 0; }
+
+  .fnavn {
+    font-size: 40pt;
+    padding-top: 10%; }
+
+  .ftekst {
+    font-size: 14pt;
+    width: 500px;
+    line-height: 26px; }
+
+  .bestilling_web {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center; }
+
+  .boverskrift {
+    width: 400px;
+    margin-top: 8%; }
+
+  .nummer {
+    width: 90%;
+    margin-top: 100px; }
+
+  .et {
+    width: 225px;
+    height: 225px; }
+
+  .b_overskrift {
+    margin-top: 10%;
+    color: #3b1e0c; }
+
+  .b_tekst {
+    margin: 5% auto 0 auto; }
+
+  .b_cta {
+    margin: 7% auto 0 auto; }
+
+  .pil {
+    -webkit-transform: rotate(360deg);
+    width: 120px;
+    height: 30px;
+    margin: 200px 2% 0 2%; }
+
+  .pet {
+    margin-top: 12%; }
+
+  .footer_mobil {
+    display: none; }
+
+  .footer_web {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #cebba6;
+    border-top: 5px solid #3b1e0c;
+    margin-top: 5%;
+    padding-bottom: 2%;
+    color: #3b1e0c; }
+
+  .foverskrift {
+    width: 150px;
+    height: 30px;
+    background-color: #3b1919;
+    color: #ebe3d9;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14pt;
+    padding: 5% 0 5% 0;
+    margin-top: 25%; }
+
+  .kon {
+    padding-top: 4%; }
+
+  .findoson {
+    flex-direction: column; }
+
+  .mellemrum {
+    padding-top: 6%; }
+
+  .sometekst {
+    font-size: 14pt;
+    color: #3b1e0c;
+    padding-top: 5%;
+    text-align: start; }
+
+  .flex_some {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around; }
+
+  .fa-facebook-official, .fa-instagram, .fa-pinterest {
+    color: #3b1e0c;
+    margin-left: -10%; }
+
+  .pin {
+    padding-right: 5%;
+    margin-right: 7%; } }
+
+/*# sourceMappingURL=chocolateclub.css.map */

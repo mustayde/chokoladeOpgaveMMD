@@ -1,0 +1,1163 @@
+//Nairi Muradian  har kodet dette stykke
+
+
+
+// Alt der gælder for mobil og højere
+
+* { // Gælder alt på hele siden
+  -webkit-box-sizing: border-box; // -webkit- browserunderstøttelse
+  box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
+}
+
+body {
+  margin: 0; // Ingen kanter i siden af browser
+  background-color: #ebe3d9;
+  font-family: "Sofia Pro";
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; // Ingen ydre margen fra overskrifter
+  padding: 0; // Ingen indre margen fra overskrifter
+}
+
+ul, ol {
+  margin: 0; // Ingen ydre margen fra lister
+  padding: 0; // Ingen indre margen fra lister
+  list-style-position: inside; // List punkter står på linje
+}
+
+li {
+  margin: 0; // Ingen ydre margen fra listpunkter
+}
+
+p {
+  margin: 0; // Ingen ydre margen fra paragraffer
+  padding: 0; // Ingen indre margen fra paragraffer
+}
+
+// Sikrer billeder er responsive
+img {
+  display: block; // Billeder er et element (laver linjeskift)
+  max-width: 100%; // Bredde må maks fylde 100%
+  height: auto; // Højden skal tilpasse sig
+}
+//------------------------------ body-------------//
+
+.link{
+  text-decoration: none;
+  color: #3b1e0c;
+}
+
+.header{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.logo{
+  width: 100%;
+  height: 100%;
+  padding-right: 2%;
+}
+
+.logo_link{
+  width: 50%;
+}
+
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  /* bliver stående */
+  z-index: 1;
+  /* Gør at overlay er over alt indhold*/
+  left: 0;
+  top: 0;
+  background-color: rgba(68, 37, 18, 0.9);
+  /* gennemsigtig brun */
+  overflow-x: hidden;
+  /* gør man ikke kan scroll */
+  transition: 0.5s;
+  /* tiden på animation */ }
+
+/* position af indhold */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Futura PT";
+  font-weight: 100;
+}
+
+/* styling af skrift på overlay*/
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #ebe3d9;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover {
+  color: #cebba6;
+  text-decoration: none; }
+
+/* position af luk knappen*/
+.closebtn a {
+  position: absolute;
+  font-size: 60px;
+}
+
+.closebtn{
+  text-align: center;
+}
+
+/*# sourceMappingURL=overlaystyle.css.map */
+
+.hamburgerMenu a{
+  color: #3b1e0c;
+}
+
+.mobil_header{
+  margin-top: 23%;
+  margin-left: 5%;
+}
+
+.computer{
+  display: none;
+}
+
+
+
+
+
+
+
+
+//-------------------header------------//
+
+.Con{
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+
+}
+
+.Str{
+  max-width: 100%;
+  height: 300px;
+}
+
+.Prev, .Next{
+  cursor: pointer;//------ når man holder på pilen kommer den hvide hånd med peger fingeren frem---- //
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #cebba6;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+
+}
+
+.Next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.Prev:hover, .Next:hover{
+  background-color: #3b1e0c;
+}
+
+
+.Aktiv, .Dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.Tekst{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+//---------------- slideshow----------------//
+
+
+
+
+.flex{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+
+}
+.baggrund{
+  background-color: #cebba6;
+  width: 100%;
+  height:150px;
+}
+.gaver1, .gaver2, .gaver3{
+  height: 35%;
+  width: 35%;
+  padding-top: 5%;
+}
+.text{
+    color:#3b1e0c;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 4%;
+}
+
+.gaver3 {
+  transition: 0.5s ease;
+}
+.gaver3:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+.gaver2 {
+  transition: 0.5s ease;
+}
+.gaver2:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+.gaver1 {
+  transition: 0.5s ease;
+}
+.gaver1:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+
+
+//--------------------------------første række af billeder mobil------------//
+
+.flex1{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.baggrund1{
+  background-color:#cebba6 ;
+  width: 100%;
+  height:150px;
+}
+.festlige1, .festlige2, .festlige3{
+  height: 35%;
+  width: 35%;
+  padding-top: 5%;
+}
+.text1{
+  color:#3b1e0c;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4%;
+}
+
+.festlige1 {
+  transition: 0.5s ease;
+}
+.festlige1:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+.festlige2 {
+  transition: 0.5s ease;
+}
+.festlige2:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+.festlige3 {
+  transition: 0.5s ease;
+}
+.festlige3:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+
+
+//------------------- andet række af billeder mobil -------------//
+
+
+.flex2{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.baggrund2{
+  background-color:#cebba6 ;
+  width: 100%;
+  height:150px;
+}
+.bryllup1, .bryllup2, .bryllup3{
+  height: 35%;
+  width: 35%;
+  padding-top: 5%;
+}
+.text2{
+  color:#3b1e0c;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4%;
+}
+.bryllup1 {
+  transition: 0.5s ease;
+}
+.bryllup1:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+.bryllup2 {
+  transition: 0.5s ease;
+}
+.bryllup2:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+.bryllup3 {
+  transition: 0.5s ease;
+}
+.bryllup3:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+
+
+//---------------- række tredje af billeder mobil-------//
+
+.flex3{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.baggrund3{
+  background-color:#cebba6 ;
+  width: 100%;
+  height:150px;
+}
+.markedag1, .markedag2, .markedag3{
+  height: 35%;
+  width: 35%;
+  padding-top: 5%;
+}
+.text3{
+  color:#3b1e0c;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4%;
+}
+.markedag1 {
+  transition: 0.5s ease;
+}
+.markedag1:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+
+.markedag2 {
+  transition: 0.5s ease;
+}
+.markedag2:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+
+.markedag3 {
+  transition: 0.5s ease;
+}
+.markedag3:hover {
+
+  transform: scale(1.2 ,1.2);
+}
+
+
+
+
+//----------------række fire af billedermobil--------------//
+
+
+.footer_mobil{
+  width: 100%;
+  height: auto;
+  background-color: #cebba6;
+  border-top: 5px solid #3b1e0c;
+  margin-top: 20%;
+  padding-top: 5%;
+  text-align: center;
+  color: #3b1e0c;
+}
+
+.footer_web{
+  display: none;
+}
+
+.opentime{
+  font-weight: 600;
+}
+
+.adress{
+  padding-top: 5%;
+}
+
+.adresset{
+  font-weight: 600;
+}
+
+.mellemrum{
+  padding-top: 1%;
+}
+
+.tlf{
+  padding-top: 5%;
+}
+
+.tlft{
+  font-weight: 600;
+}
+
+.email{
+  padding-top: 5%;
+}
+
+.emailt{
+  font-weight: 600;
+}
+
+.some{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 24pt;
+}
+
+
+
+//---------------- footer til mobil----------//
+
+
+
+
+@media screen and (min-width: 768px) {
+  // Alt der ændres i tablet stående fra mobil
+
+  .Con{
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    padding-left: 130px;
+
+  }
+
+  .Next{
+    margin-right: 100px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .Tekst{
+    margin-left: 140px;
+    font-size: 30px;
+  }
+
+//------------slideshow til ipad--------//
+
+.flex{
+  max-width: 100%;
+}
+  .baggrund{
+    height: 250px;
+  }
+
+  .gaver1, .gaver2, .gaver3{
+    padding-top: 2%;
+
+  }
+
+  .text{
+    color:#3b1e0c;
+    font-size: 35px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+  }
+
+  .gaver3 {
+    transition: 0.5s ease;
+  }
+  .gaver3:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+  .gaver2 {
+    transition: 0.5s ease;
+  }
+  .gaver2:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+
+  .gaver1 {
+    transition: 0.5s ease;
+  }
+  .gaver1:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+ //------------------første række af billeder ipad-------//
+
+  .flex{
+    max-width: 100%;
+  }
+
+  .baggrund1{                                 
+    height: 250px;
+  }                                           
+  .text1{                                     
+    color:#3b1e0c;                            
+    font-size: 35px;                          
+    position: absolute;                       
+    width: 100%;                              
+    text-align: center;                       
+    padding: 2%;                              
+  }                                           
+                                              
+  .festlige1, .festlige2, .festlige3{         
+    padding-top: 2%;                          
+  }                                           
+                                              
+  .festlige1 {                                
+    transition: 0.5s ease;                    
+  }                                           
+  .festlige1:hover {                          
+                                              
+    transform: scale(1.2 ,1.2);               
+  }                                           
+                                              
+  .festlige2 {                                
+    transition: 0.5s ease;                    
+  }                                           
+  .festlige2:hover {                          
+                                              
+    transform: scale(1.2 ,1.2);               
+  }                                           
+                                              
+                                              
+  .festlige3 {                                
+    transition: 0.5s ease;                    
+  }                                           
+  .festlige3:hover {                          
+                                              
+    transform: scale(1.2 ,1.2);               
+  }                                           
+
+ //--------------------andet række af billeder ipad---------//
+
+  .flex2{
+    max-width: 100%;
+  }
+  .baggrund2{
+   height: 250px;
+ }                                
+ .bryllup1, .bryllup2, .bryllup3{ 
+   padding-top: 2%;               
+ }                                
+ .text2{                           
+   color:#3b1e0c;                 
+   font-size: 35px;               
+   position: absolute;            
+   width: 100%;                   
+   text-align: center;            
+   padding: 2%;                   
+ }                                
+ .bryllup1 {                      
+   transition: 0.5s ease;         
+ }                                
+ .bryllup1:hover {                
+                                  
+   transform: scale(1.2 ,1.2);    
+ }                                
+                                  
+ .bryllup2 {                      
+   transition: 0.5s ease;         
+ }                                
+ .bryllup2:hover {                
+                                  
+   transform: scale(1.2 ,1.2);    
+ }                                
+                                  
+ .bryllup3 {                      
+   transition: 0.5s ease;         
+ }                                
+ .bryllup3:hover {                
+                                  
+   transform: scale(1.2 ,1.2);    
+ }                                
+ //---------------------- tredje række af bileder ipad--------//
+
+ .baggrund3{                                 
+   height: 250px;                            
+ }                                           
+ .flex3{                                     
+   display: -webkit-flex;                    
+   display: flex;                            
+   justify-content: space-around;            
+ }                                           
+                                             
+ .markedag1, .markedag2, .markedag3{         
+   padding-top: 2%;                          
+ }                                           
+ .text3{                                     
+   color:#3b1e0c;                            
+   font-size: 35px;                          
+   position: absolute;                       
+   width: 100%;                              
+   text-align: center;                       
+   padding: 2%;                              
+ }                                           
+ .markedag1 {                                
+   transition: 0.5s ease;                    
+ }                                           
+ .markedag1:hover {                          
+                                             
+   transform: scale(1.2 ,1.2);               
+ }                                           
+                                             
+                                             
+                                              
+ .markedag2 {                                
+   transition: 0.5s ease;                    
+ }                                           
+ .markedag2:hover {                          
+                                             
+   transform: scale(1.2 ,1.2);               
+ }                                           
+                                             
+                                             
+                                             
+ .markedag3 {                                
+   transition: 0.5s ease;                    
+ }                                           
+ .markedag3:hover {                           
+                                             
+   transform: scale(1.2 ,1.2);               
+}}                                           
+
+
+
+//------------------- fire række af billeder ipad-------/
+
+
+
+.open, .adress, .tlf, .email{
+  font-size: 18pt;
+}
+
+.some{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 35pt;
+}
+
+//-----------footer til ipad----------
+
+
+
+
+@media screen and (min-width: 992px) {
+  // Alt der ændres i tablet liggende fra mobil og tablet stående
+}
+
+@media screen and (min-width: 1200px) {
+  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+  .logo{
+    width: 400px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .header{
+    justify-content: center;
+    padding-right: 5%;
+    margin-top: 1%;
+    margin-left: 4%;
+  }
+
+  .menu:hover{
+    width: 150px;
+    height: 240px;
+    background-color: #cebba6;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 120px;
+    margin-top: -120px;
+
+  }
+
+  .menubar{
+    width: 100%;
+    margin-top: 150px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 5%;
+    font-size: 14pt;
+    font-weight: 600;
+  }
+
+  .nav{
+    width: 80%;
+  }
+
+  .nav li a{
+    text-decoration: none;
+    color: #3b1e0c;
+  }
+
+  .computer{
+    display: inline;
+  }
+
+  .mobil_header{
+    display: none;
+  }
+
+  .anledning_baggrund1{
+    background-color: #cebba6;
+    width: 170px;
+    height: 240px;
+    padding-top: 115px;
+    border-radius: 4px;
+  }
+
+  .dropbtn{
+    background-color: #ebe3d9;
+    color: #3b1e0c;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    height: 250px;
+    padding: auto 0 auto 0;
+    margin-top: -150px;
+    font-size: 14pt;
+    font-weight: 600;
+  }
+
+  .anledning{
+    width: 180px;
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #cebba6;
+    min-width: 220px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    font-weight: 100;
+    font-family: "Futura PT";
+  }
+
+  .dropdown-content a{
+    color: #500a0b;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+  }
+
+  .dropdown-content a:hover{
+    background-color: #ebe3d9;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn{
+    background-color: #cebba6;
+  }
+
+  //--------------header til web------------------//
+  .Con{
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+
+  }
+
+  .Str{
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto 0 auto;
+  }
+
+  .Prev, .Next{
+    cursor: pointer;//------ når man holder på pilen kommer den hvide hånd med peger fingeren frem---- //
+    margin-left: 15px;
+    top: 50%;
+    color: #cebba6;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+
+  }
+
+  .Next{
+    margin-right: 150px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .Prev{
+    margin-left: 150px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .Prev:hover, .Next:hover{
+    background-color: #3b1e0c;
+
+  }
+
+
+  .Aktiv{
+    background-color: #717171;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .Tekst{
+    margin-left: 440px;
+    font-size: 25px;
+  }
+
+//--------- Slideshow til web---------////
+
+
+
+
+  .baggrund{
+   height: 400px;
+   width: 100%;
+   background-color: #cebba6;
+    
+  }
+
+  
+  .gaver1, .gaver2, .gaver3{
+    padding-top: 2%;
+  }
+
+  .text{
+    color:#3b1e0c;
+    font-size: 35px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+  }
+
+  .gaver3 {
+    transition: 0.5s ease;
+  }
+  .gaver3:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+  .gaver2 {
+    transition: 0.5s ease;
+  }
+  .gaver2:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+
+  .gaver1 {
+    transition: 0.5s ease;
+  }
+  .gaver1:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+  //---------------første række af billeder web---------------//
+
+  .baggrund1{
+    height: 400px;
+  }
+  .text1{
+    color:#3b1e0c;
+    font-size: 35px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+  }
+
+  .festlige1, .festlige2, .festlige3{
+    padding-top: 2%;
+  }
+
+  .festlige1 {
+    transition: 0.5s ease;
+  }
+  .festlige1:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+  .festlige2 {
+    transition: 0.5s ease;
+  }
+  .festlige2:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+
+  .festlige3 {
+    transition: 0.5s ease;
+  }
+  .festlige3:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+//------------------ andet række af billeder web--------//
+
+  .baggrund2{
+    height: 400px;
+  }
+  .bryllup1, .bryllup2, .bryllup3{
+    padding-top: 2%;
+  }
+  .text2{
+    color:#3b1e0c;
+    font-size: 35px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+  }
+  .bryllup1 {
+    transition: 0.5s ease;
+  }
+  .bryllup1:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+  .bryllup2 {
+    transition: 0.5s ease;
+  }
+  .bryllup2:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+  .bryllup3 {
+    transition: 0.5s ease;
+  }
+  .bryllup3:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+//------------------- tredje række af billeder web----------//
+
+  .baggrund3{
+    height: 400px;
+  }
+  .flex3{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .markedag1, .markedag2, .markedag3{
+    padding-top: 2%;
+  }
+  .text3{
+    color:#3b1e0c;
+    font-size: 35px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+  }
+  .markedag1 {
+    transition: 0.5s ease;
+  }
+  .markedag1:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+
+
+  .markedag2 {
+    transition: 0.5s ease;
+  }
+  .markedag2:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+
+
+
+  .markedag3 {
+    transition: 0.5s ease;
+  }
+  .markedag3:hover {
+
+    transform: scale(1.2 ,1.2);
+  }
+    //----------------- fire række af billeder web-----------//
+
+
+  .footer_mobil{
+    display: none;
+  }
+
+  .footer_web{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #cebba6;
+    border-top: 5px solid #3b1e0c;
+    margin-top: 5%;
+    padding-bottom: 2%;
+    color: #3b1e0c;
+  }
+
+  .foverskrift{
+    width: 150px;
+    height: 30px;
+    background-color: #3b1919;
+    color: #ebe3d9;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14pt;
+    padding: 5% 0 5% 0;
+    margin-top: 25%;
+  }
+
+  .kon{
+    padding-top: 4%;
+  }
+
+  .findoson{
+    flex-direction: column;
+  }
+
+  .mellemrum{
+    padding-top: 6%;
+  }
+
+  .sometekst{
+    font-size: 14pt;
+    color: #3b1e0c;
+    padding-top: 5%;
+    text-align: start;
+  }
+
+  .flex_some{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .fa-facebook-official, .fa-instagram, .fa-pinterest{
+    color: #3b1e0c;
+    margin-left: -10%;
+  }
+
+  .pin{
+    padding-right: 5%;
+    margin-right: 7%;
+  }
+  //--------------- footer til web---------------//
+
+
+
+
+
+
+}
+
+@media print {
+  // Alt der gælder for print specifikt
+}

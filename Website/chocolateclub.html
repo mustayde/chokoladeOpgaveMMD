@@ -1,0 +1,269 @@
+<!--Sascha Bernard har kodet dette-->
+
+
+
+<!doctype html>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Chocolate Club</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <link href="css/chocolateclub.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/ea16362235.js"></script>
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="javascript.js"></script>
+
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+<!-----------------------------------------------Header----------------------------------------------------->
+<div class="header">
+    <a class="logo_link" href="index.html"><img class="logo" src="Image/logo.png"/></a>
+
+    <div class="mobil_header">
+        <!-- Ikon der åbner menuen i overlay -->
+        <div onclick="openNav()" class="hamburgerMenu tablet">
+            <a href="#">
+             <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <!-- overlay -->
+        <div id="myNav" class="overlay">
+
+            <!--Knappen der lukker overlay med font awesome ikon -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+
+                <a href="index.html">FORSIDE</a>
+                <a href="#">CHOCOLATE CLUB</a>
+                <a href="anledninger.html">ANLEDNINGER</a>
+                <a href="#">KONTAKT OS</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="nav computer">
+        <ul class="menubar">
+            <li class="menu"><a href="index.html">FORSIDE</a></li>
+
+            <div class="dropdown">
+                <button class="dropbtn"><div class="cc_baggrund">CHOCOLATE CLUB<i class="fa fa-angle-down"></i></div></button>
+                <div class="dropdown-content">
+                    <a href="#">AMALIE VON SCHRAM</a>
+                    <a href="#">TOBIAS TRADS</a>
+                    <a href="#">FREDERIK WOLMER</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="anledninger.html"><button class="dropbtn anledning">ANLEDNINGER<i class="fa fa-angle-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">GAVEÆSKER</a>
+                    <a href="#">FESTLIGE LEJLIGHEDER</a>
+                    <a href="#">BRYLLUPPER</a>
+                    <a href="#">MÆRKEDAGE</a>
+                </div>
+                </a>
+            </div>
+            <li class="menu"><a href="#">KONTAKT OS</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+<!-----------------------------------------------Amalie----------------------------------------------------->
+<div class="amalie">
+    <div class="border">
+        <div class="web_person_boks">
+            <img class="abillede" src="Image/Amalie_.png" height="auto" width="250"/>
+
+            <div class="web_tekst">
+                <a class="link" href="#"><p class="anavn">AMALIE VON SCHRAM</p></a>
+                <p class="atekst">
+                    Min store pasion er at lave små nydelser, som har hovedingrediens, Chokolade.
+                    Jeg har i 2017 opstartet mit egent firma med <a class="link" href="#"><b>fyldte chokolader</b></a>.
+                    Tidliger har jeg arbejde hos Frellsens, hvor jeg stod for div chokolader og smagen af dem.
+                </p>
+                <a class="link" href="#"><div class="CTA">OPLEV MINE SMÅ NYDELSER</div></a>
+                <img class="personlogo" src="Image/logo-A.png" height="269" width="421"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-----------------------------------------------Tobias----------------------------------------------------->
+<div class="tobias">
+    <div class="border">
+       <div class="web_person_boks">
+
+           <img class="tbillede" src="Image/Tobias_.png" height="auto" width="250"/>
+
+           <div class="web_tekst">
+               <a class="link" href="#"><p class="tnavn">TOBIAS TRADS</p></a>
+                <p class="ttekst">
+                    Jeg har en stor interresse for kager og farver, som jeg synes kommer bedst til udtryk i <a class="link" href="#"><b>børnekager</b></a>.
+                    Jeg har derfor i mange år arbejde hos en konditor, hvor min hovedopgave var kager til børn.
+                    Jeg valgte i starten af 2017 at starte egen virksomhed, som tager udgangpunkt i børnekager.
+                </p>
+               <a class="link" href="#"><div class="CTA">SE TIDLIGERE BØRNEKAGEER</div></a>
+                <img class="personlogo" src="Image/logo-T.png" height="269" width="421"/>
+           </div>
+       </div>
+    </div>
+</div>
+
+
+
+
+<!-----------------------------------------------Frederik----------------------------------------------------->
+<div class="frederik">
+    <div class="border">
+        <div class="web_person_boks">
+            <img class="fbillede" src="Image/Frederik_.png" height="auto" width="250"/>
+
+            <div class="web_tekst">
+                <a class="link" href="#"><p class="fnavn">FREDERIK WOLMER</p></a>
+                <p class="ftekst">
+                    Jeg er en perfektionist som elsker at gå i dybden med detaljerne.
+                    Jeg har tidligere arbejdet hos lagkagehuset, hvor min specialitet var at pynte og designe <a class="link" href="#"><b>unikke kager</b></a> til forsekllige begivenheder.
+                    Jeg har lige startet ny virksomhed, hvor jeg stæber efter unikke og personlige udtryk på kagerne.
+                </p>
+                <a class="link" href="#"><div class="CTA">SE MINE UNIKKE KAGER</div></a>
+                <img class="personlogo" src="Image/logo-F.png" height="269" width="421"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-----------------------------------------------Bestilling----------------------------------------------------->
+
+<div class="bestilling">
+    <div class="boverskrift">SÅ NEMT ER DET</div>
+
+   <div class="bestilling_web">
+       <div class="iboks">
+            <img class="nummer et" src="Image/1.png" height="222" width="222"/>
+            <p class="b_overskrift">Find inspiration</p>
+            <p class="b_tekst">Find billeder og idéer, så vi sammen kan finde den perfekte løsning for dig.</p>
+            <a class="link" href="#"><p class="b_cta pet">Find din inspiration her <i class="fa fa-angle-double-right"></i></p></a>
+        </div>
+
+       <img class="pil" src="Image/pile.png" height="50" width="100"/>
+
+        <div class="kboks">
+            <img class="nummer" src="Image/2.png" height="222" width="222"/>
+            <p class="b_overskrift">Kontakt os</p>
+            <p class="b_tekst">Ring eller send en mail, og så er du kun ét skridt fra at have desserten eller gaven på plads.</p>
+            <a class="link" href="#"><p class="b_cta">Gå til kontakt os <i class="fa fa-angle-double-right"></i></p></a>
+        </div>
+
+       <img class="pil" src="Image/pile.png" height="50" width="100"/>
+
+
+        <div class="fboks">
+            <img class="nummer" src="Image/3.png" height="222" width="222"/>
+            <p class="b_overskrift">Sæt en dato</p>
+            <p class="b_tekst">Fastlæg en dato du skal bruge lækkerierne.</p>
+        </div>
+   </div>
+
+
+</div>
+
+
+
+
+
+<!-----------------------------------------------Footer----------------------------------------------------->
+<div class="footer_mobil">
+       <div class="open">
+           <div class="opentime">Åbningstider:</div>
+           <p class="mellemrum">Man-Fre: 10:00 - 19:00</p>
+           <p class="mellemrum">Lør: 10:00 - 15:30</p>
+           <p class="mellemrum">Søn: Lukket</p>
+       </div>
+
+       <div class="adress">
+           <p class="mellemrum adresset">Adresse:</p>
+           <a class="link" href="#">
+               <p class="mellemrum">Ugandavej 23,</p>
+               <p class="mellemrum">2260 Frederiksberg</p>
+           </a>
+       </div>
+
+       <div class="tlf">
+           <p class="mellemrum tlft">Telefon:</p>
+           <a class="link" href="#"><p class="mellemrum">58 50 01 02</p></a>
+       </div>
+
+       <div class="email">
+           <p class="mellemrum emailt">E-mail:</p>
+           <a class="link" href="#"><p class="mellemrum">Choco@club.com</p></a>
+       </div>
+
+
+       <div class="some">
+           <a class="link" href="#"><i class="fa fa-facebook-official"></i></a>
+           <a class="link" href="#"><i class="fa fa-instagram"></i></a>
+           <a class="link" href="#"><i class="fa fa-pinterest"></i></a>
+       </div>
+</div>
+
+<div class="footer_web">
+    <div class="kboks">
+        <a class="link" href="#"><div class="foverskrift kon">Kontakt os</div></a>
+        <a class="link" href="#"><p class="mellemrum">Tlf: 59 50 01 02</p></a>
+        <a class="link" href="#"><p class="mellemrum">E-mail: Choco@club.com</p></a>
+        <br>
+        <p class="mellemrum">Adressen:</p>
+        <a class="link" href="#"><p class="mellemrum">Ugandavej 23,</p></a>
+        <a class="link" href="#"><p class="mellemrum">2260 Frederiksberg</p></a>
+    </div>
+    <div class="aaboks">
+        <div class="foverskrift">Åbningstider</div>
+        <p class="mellemrum">Man-Fre: 10:00 - 19:00</p>
+        <p class="mellemrum">Lør: 10:00 - 15:30</p>
+        <p class="mellemrum">Søn: Lukket</p>
+    </div>
+    <div class="fboks">
+        <div class="foverskrift findoson">Find os på</div>
+        <a class="link" href="#"><div class="flex_some mellemrum"><i class="fa fa-facebook-official fa-2x"></i><p class="sometekst">Facebook</p></div></a>
+        <a class="link" href="#"><div class="flex_some mellemrum"><i class="fa fa-instagram fa-2x"></i><p class="sometekst"> Instagram</p></div></a>
+        <a class="link" href="#"><div class="flex_some mellemrum"><i class="fa fa-pinterest fa-2x"></i><p class="sometekst pin">Pinterest</p></div></a>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!--Mustafa Aydemir har kodet dette-->
+
+
+
+<!doctype html>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Chocolate Club</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <link href="css/forside.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/ea16362235.js"></script>
+    <script src="javascript.js"></script>
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+
+<div class="header">
+    <a class="logo_link" href="#"><img class="logo" src="Image/logo.png"/></a>
+
+    <div class="mobil_header">
+        <!-- Ikon der åbner menuen i overlay -->
+        <div onclick="openNav()" class="hamburgerMenu tablet">
+            <a href="#">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <!-- overlay -->
+        <div id="myNav" class="overlay">
+
+            <!--Knappen der lukker overlay med font awesome ikon -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+
+                <a href="#">FORSIDE</a>
+                <a href="chocolateclub.html">CHOCOLATE CLUB</a>
+                <a href="anledninger.html">ANLEDNINGER</a>
+                <a href="#">KONTAKT OS</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="nav computer">
+        <ul class="menubar">
+            <li class="menu forside_baggrund"><a href="#">FORSIDE</a></li>
+
+            <a href="chocolateclub.html"><div class="dropdown">
+                <button class="dropbtn"><div class="cc_baggrund">CHOCOLATE CLUB<i class="fa fa-angle-down"></i></div></button>
+                <div class="dropdown-content">
+                    <a href="#">AMALIE VON SCHRAM</a>
+                    <a href="#">TOBIAS TRADS</a>
+                    <a href="#">FREDERIK WOLMER</a>
+                </div>
+            </div>
+            </a>
+
+            <a href="anledninger.html"><div class="dropdown">
+                <button class="dropbtn anledning">ANLEDNIGER<i class="fa fa-angle-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">GAVEÆSKER</a>
+                    <a href="#">FESTLIGE LEJLIGHEDER</a>
+                    <a href="#">BRYLLUPPER</a>
+                    <a href="#">MÆRKEDAGE</a>
+                </div>
+            </div>
+            </a>
+            <li class="menu"><a href="#">KONTAKT OS</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+<!----------------------------------- Header ---------------------------------------------------->
+
+<div class="Con">
+
+    <div class="fade">
+        <img class="Str" src="Image/nydelser2.png" style="width: 100%"/>
+    </div>
+
+    <div class="fade">
+        <img class="Str" src="Image/brylluprigtig2.png" style="width: 100%"/>
+    </div>
+
+    <div class="fade">
+        <img class="Str" src="Image/gaverigtig33.png" style="width: 100%"/>
+    </div>
+
+
+    <a class="Prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- class="prev" = Det gør at firkanten og pilen bliver vist frem
+    onclick="plusSlides(-1)" = Det gør at den er klikbar og man kan trykke
+    tilbage på slidet
+    #10094 = koden former en pile-->
+</div>
+
+<br><br>
+
+    <div style="text-align: center">
+        <span class="Dot" onclick="currentSlide(1)"></span>
+        <span class="Dot" onclick="currentSlide(2)"></span>
+        <span class="Dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+<script>
+    var slideIndex = 1;
+    showfade(slideIndex);
+ 
+  function plusSlides(n) {
+      showfade(slideIndex += n);
+  }
+
+  function currentSlides(n) {
+      showfade(slideIndex = n);
+  }
+  
+  function showfade(n) {
+      var i;
+      var Slide = document.getElementsByClassName("fade");
+      var Dot = document.getElementsByClassName("Dot");
+      if (n > Slide.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = Slide.length}
+      for (i = 0; i < Slide.length; i++) {
+          Slide[i].style.display = "none";
+      }
+      for (i = 0; i < Dot.length; i++) {
+          Dot[i].className = Dot[i].className.replace(" Aktiv", "");
+      }
+      Slide[slideIndex-1].style.display = "block";
+      Dot[slideIndex-1].className += " Aktiv";
+  }
+</script>
+
+<!---------------------------------------Slideshow------------------------------------------->
+
+
+
+        <div class="mobile">
+
+        <a class="link_overskrift" href="#">
+        <div class="overskrift">
+        <p>TILMED DIG FORÅRETS ARRANGEMENT NU!</p>
+        </div>
+        </a>
+
+            <div class="marts">
+            <p> Marts 13, 2018  </p>
+            </div>
+        <div class="tekst">
+        <p>Så er forårts arrangement ved at være på plads.
+        Du kan nu tilmelde vores arrangement.
+        Vi kommer til at lave alt fra små fyldte chokolader til
+        store højtidskager, såsom fødselsdage kager.
+        Vi får fint besøg af Frederik Wolmar, Tobias Trards og Amalie Von Schram
+        , som er specialist i hver sin område. </p>
+        </div>
+
+        <br>
+
+            <a href="#">
+                <div class="kage">
+                    <img src="Image/Brun_kage.png"/>
+                </div>
+            </a>
+
+
+        <br><br>
+
+        <div class="Baggrundsfarve">
+            <a class="link_overskrift" href="#">
+            <div class="over">
+                <p>BLIV MEDLEM</p>
+        </div>
+            </a>
+        <div class="text">
+            <p> Elsker du chokolade og kage, så har du mulighed
+            for at få gode og smagsfulde oplevelser med
+            chokolade og kage. Så bliv medlem af <b>Chocolade Club</b>
+            Her får du adgang til smagsprøver, arrangermenter og kurser og ikke mindst
+            får du tilsendt et nyhedsbrev fra <b>Chocolate Club</b></p>
+        </div>
+
+
+        <br>
+        <a href="#">
+        <div class="Choko">
+            <img src="Image/Sc.png"/>
+        </div>
+            </a>
+
+        <br><br>
+        </div>
+        <a class="link_overskrift" href="#">
+        <div class="skrift">
+            <p>GAVEÆSKER</p>
+        </div>
+        </a>
+        <div class="gavetekst">
+            <p>Mangler du en værtinde gave?
+                Kig ind i vores udvalg af forskellige gaveæsker </p>
+        </div>
+
+        <br>
+        <a href="#">
+        <div class="aeske">
+            <img src="Image/gaver.png"/>
+        </div>
+        </a>
+<!-----------------------------Billeder og tekster-------------------------->
+            <div class="footer_mobil">
+                <div class="open">
+                    <div class="opentime">Åbningstider:</div>
+                    <p class="mellemrum">Man-Fre: 10:00 - 19:00</p>
+                    <p class="mellemrum">Lør: 10:00 - 15:30</p>
+                    <p class="mellemrum">Søn: Lukket</p>
+                </div>
+
+                <div class="adress">
+                    <p class="mellemrum adresset">Adresse:</p>
+                    <a class="link" href="#">
+                        <p class="mellemrum">Ugandavej 23,</p>
+                        <p class="mellemrum">2260 Frederiksberg</p>
+                    </a>
+                </div>
+
+                <div class="tlf">
+                    <p class="mellemrum tlft">Telefon:</p>
+                    <a class="link" href="#"><p class="mellemrum">58 50 01 02</p></a>
+                </div>
+
+                <div class="email">
+                    <p class="mellemrum emailt">E-mail:</p>
+                    <a class="link" href="#"><p class="mellemrum">Choco@club.com</p></a>
+                </div>
+
+
+                <div class="some">
+                    <a class="link" href="#"><i class="fa fa-facebook-official"></i></a>
+                    <a class="link" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="link" href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+<!--------------------------------Footer------------------------------------->
+<!-------------------------------Webside---------------------------------->
+
+    <div class="web">
+        <div class="flex">
+            <div>
+                <div>
+                    <a class="link" href="#">
+                        <img src="Image/chocolatecake.png"/>
+                    </a>
+                    <div>
+                        <a class="link" href="#">
+                            <h3>TILMED DIG FORÅRETS ARRANGEMENT NU!</h3>
+                        </a>
+
+                        <h1>Marts 13, 2018</h1>
+
+                        <p>Så er forårts arrangement ved at være på plads.
+                            Du kan nu tilmelde vores arrangement.
+                            Vi kommer til at lave alt fra små fyldte chokolader til
+                            store højtidskager, såsom fødselsdage kager.
+                            Vi får fint besøg af Frederik Wolmar, Tobias Trards og Amalie Von Schram
+                            , som er specialist i hver sin område.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <a class="link" href="#">
+                        <img src="Image/nygave.png"/>
+                    </a>
+                    <div>
+                        <a class="link" href="#">
+                            <h3>GAVEÆSKER</h3>
+                        </a>
+                        <p>Mangler du en værtinde gave?
+                            Kig ind i vores udvalg af forskellige gaveæsker</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <a class="link" href="#">
+                        <img src="Image/nyrund.png"/>
+                    </a>
+                    <div>
+                        <a class="link" href="#">
+                            <h3>BLIV MEDLEM</h3>
+                        </a>
+                        <p>Elsker du chokolade og kage, så har du mulighed
+                            for at få gode og smagsfulde oplevelser med
+                            chokolade og kage. Så bliv medlem af <b>Chocolade Club</b>
+                            Her får du adgang til smagsprøver, arrangermenter og kurser og ikke mindst
+                            får du tilsendt et nyhedsbrev fra <b>Chocolate Club</b>Mangler du en værtinde gave?
+                            Kig ind i vores udvalg af forskellige gaveæsker </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+<div class="footer_web">
+    <div class="kboks">
+        <a class="link" href="#"><div class="foverskrift kon">Kontakt os</div></a>
+        <a class="link" href="#"><p class="mellemrum">Tlf: 59 50 01 02</p></a>
+        <a class="link" href="#"><p class="mellemrum">E-mail: Choco@club.com</p></a>
+        <br>
+        <p class="mellemrum">Adressen:</p>
+        <a class="link" href="#"><p class="mellemrum">Ugandavej 23,</p></a>
+        <a class="link" href="#"><p class="mellemrum">2260 Frederiksberg</p></a>
+    </div>
+    <div class="aaboks">
+        <div class="foverskrift">Åbningstider</div>
+        <p class="mellemrum">Man-Fre: 10:00 - 19:00</p>
+        <p class="mellemrum">Lør: 10:00 - 15:30</p>
+        <p class="mellemrum">Søn: Lukket</p>
+    </div>
+    <div class="fboks">
+        <div class="foverskrift findoson">Find os på</div>
+        <a class="link" href="#"><div class="flex_some mellemrum"><i class="fa fa-facebook-official fa-2x"></i><p class="sometekst">Facebook</p></div></a>
+        <a class="link" href="#"><div class="flex_some mellemrum"><i class="fa fa-instagram fa-2x"></i><p class="sometekst"> Instagram</p></div></a>
+        <a class="link" href="#"><div class="flex_some mellemrum"><i class="fa fa-pinterest fa-2x"></i><p class="sometekst pin">Pinterest</p></div></a>
+    </div>
+</div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,743 @@
+//Mustafa Aydemir har kodet dette stykke
+
+
+
+// Alt der gælder for mobil og højere
+
+* { // Gælder alt på hele siden
+  -webkit-box-sizing: border-box; // -webkit- browserunderstøttelse
+  box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
+}
+
+body {
+  margin: 0; // Ingen kanter i siden af browser
+
+  background-color: #ebe3d9;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Sofia Pro";
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; // Ingen ydre margen fra overskrifter
+  padding: 0; // Ingen indre margen fra overskrifter
+}
+
+ul, ol {
+  margin: 0; // Ingen ydre margen fra lister
+  padding: 0; // Ingen indre margen fra lister
+  list-style-position: inside; // List punkter står på linje
+}
+
+li {
+  margin: 0; // Ingen ydre margen fra listpunkter
+}
+
+p {
+  margin: 0; // Ingen ydre margen fra paragraffer
+  padding: 0; // Ingen indre margen fra paragraffer
+}
+
+// Sikrer billeder er responsive
+img {
+  display: block; // Billeder er et element (laver linjeskift)
+  max-width: 100%; // Bredde må maks fylde 100%
+  height: auto; // Højden skal tilpasse sig
+}
+
+.web{
+  display: none;
+}
+.link{
+  text-decoration: none;
+  color: #3b1e0c;
+}
+
+.header{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.logo{
+  width: 100%;
+  height: 100%;
+  padding-right: 2%;
+}
+
+.logo_link{
+  width: 50%;
+}
+
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  /* bliver stående */
+  z-index: 1;
+  /* Gør at overlay er over alt indhold*/
+  left: 0;
+  top: 0;
+  background-color: rgba(68, 37, 18, 0.9);
+  /* gennemsigtig brun */
+  overflow-x: hidden;
+  /* gør man ikke kan scroll */
+  transition: 0.5s;
+  /* tiden på animation */ }
+
+/* position af indhold */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Futura PT";
+  font-weight: 100;
+}
+
+/* styling af skrift på overlay*/
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #ebe3d9;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover {
+  color: #cebba6;
+  text-decoration: none; }
+
+/* position af luk knappen*/
+.closebtn a {
+  position: absolute;
+  font-size: 60px;
+}
+
+.closebtn{
+  text-align: center;
+}
+
+/*# sourceMappingURL=overlaystyle.css.map */
+
+.hamburgerMenu a{
+  color: #3b1e0c;
+}
+
+.mobil_header{
+  margin-top: 23%;
+  margin-left: 5%;
+}
+
+.computer{
+  display: none;
+}
+
+
+
+
+//---------------------- Header -----------------------------------//
+
+.Con{
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+
+}
+
+.Str{
+  height: 300px;
+  max-width: 100%;
+  margin-top: 5%;
+}
+
+.Prev, .Next{
+  cursor: pointer;//------ når man holder på pilen kommer den hvide hånd med peger fingeren frem---- //
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #cebba6;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+
+}
+
+.Next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.Prev:hover, .Next:hover{
+  background-color: #3b1e0c;
+}
+
+
+.Dot{
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #3b1e0c;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.Aktiv, .Dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+//-------------------------------------SlideShow-------------------------//
+
+.overskrift{
+  color: #3b1e0c;
+  font-family: "Futura PT";
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.marts{
+  color: #3b1e0c;
+  font-family: "Futura PT";
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.tekst{
+  color: #3b1e0c;
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 0 auto;
+  line-height: 25px;
+  padding-top: 10px;
+}
+
+.kage{
+  max-width: 50%;
+  max-height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Baggrundsfarve{
+  background-color: #cebba6;
+  height: 45%;
+  max-width: 100%;
+}
+
+
+.over{
+  color: #3b1e0c;
+  font-family: "Futura PT";
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.text{
+  color: #3b1e0c;
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 0 auto;
+  line-height: 25px;
+  padding-top: 10px;
+}
+
+.Choko{
+  max-width: 50%;
+  max-height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skrift{
+  color: #3b1e0c;
+  font-family: "Futura PT";
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.link_overskrift{
+  text-decoration: none;
+}
+
+.gavetekst{
+  color: #3b1e0c;
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 0 auto;
+  line-height: 25px;
+  padding-top: 10px;
+}
+
+.aeske{
+  max-width: 50%;
+  max-height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin: 0 auto;
+}
+
+//---------------------------Billeder og tekster-----------------------//
+
+ .footer_mobil{
+   width: 100%;
+   height: auto;
+   background-color: #cebba6;
+   border-top: 5px solid #3b1e0c;
+   margin-top: 20%;
+   padding-top: 5%;
+   text-align: center;
+   color: #3b1e0c;
+ }
+ 
+ .footer_web{
+   display: none;
+ }
+ 
+ .opentime{
+   font-weight: 600;
+ }
+ 
+ .adress{
+   padding-top: 5%;
+ }
+ 
+ .adresset{
+   font-weight: 600;
+ }
+ 
+ .mellemrum{
+   padding-top: 1%;
+ }
+ 
+ .tlf{
+   padding-top: 5%;
+ }
+ 
+ .tlft{
+   font-weight: 600;
+ }
+ 
+ .email{
+   padding-top: 5%;
+ }
+ 
+ .emailt{
+   font-weight: 600;
+ }
+ 
+ .some{
+   padding-top: 5%;
+   padding-bottom: 5%;
+   font-size: 24pt;
+ }
+//--------------------------Footer---------------------------------//
+
+@media screen and (min-width: 768px) {
+  // Alt der ændres i tablet stående fra mobil
+
+  .Str{
+    height: 500px;
+  }
+
+  .footer_mobil{
+    margin-top: 10%;
+  }
+
+    .open, .adress, .tlf, .email{
+       font-size: 18pt;
+     }
+   
+     .some{
+       padding-top: 5%;
+       padding-bottom: 5%;
+       font-size: 35pt;
+     }
+
+}
+
+@media screen and (min-width: 992px) {
+  // Alt der ændres i tablet liggende fra mobil og tablet stående
+}
+
+@media screen and (min-width: 1200px) {
+  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+
+  .logo{
+    width: 400px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .header{
+    justify-content: center;
+    padding-right: 5%;
+    margin-top: 1%;
+    margin-left: 4%;
+  }
+
+  .menu:hover{
+    width: 150px;
+    height: 240px;
+    background-color: #cebba6;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 120px;
+    margin-top: -120px;
+
+  }
+
+  .menubar{
+    width: 100%;
+    margin-top: 150px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 5%;
+    font-size: 14pt;
+    font-weight: 600;
+  }
+
+  .nav{
+    width: 80%;
+  }
+
+  .nav li a{
+    text-decoration: none;
+    color: #3b1e0c;
+  }
+
+  .computer{
+    display: inline;
+  }
+
+  .mobil_header{
+    display: none;
+  }
+
+  .forside_baggrund{
+    background-color: #cebba6;
+    width: 150px;
+    height: 240px;
+    padding-top: 125px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: -120px;
+  }
+
+  .dropbtn{
+    background-color: #ebe3d9;
+    color: #3b1e0c;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    height: 250px;
+    padding: auto 0 auto 0;
+    margin-top: -150px;
+    font-size: 14pt;
+    font-weight: 600;
+  }
+
+  .anledning{
+    width: 180px;
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #cebba6;
+    min-width: 220px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    font-weight: 100;
+    font-family: "Futura PT";
+  }
+
+  .dropdown-content a{
+    color: #500a0b;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+  }
+
+  .dropdown-content a:hover{
+    background-color: #ebe3d9;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn{
+    background-color: #cebba6;
+  }
+
+
+  .mobile{
+    display: none;
+  }
+
+  .web{
+    display: block;
+  }
+  body{
+    background-color: #ebe3d9;
+  }
+
+  .Con{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+
+  }
+
+  .Str{
+    height: 800px;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .Prev, .Next{
+    cursor: pointer;//------ når man holder på pilen kommer den hvide hånd med peger fingeren frem---- //
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #cebba6;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+
+  }
+
+  .Next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .Prev:hover, .Next:hover{
+    background-color: #3b1e0c;
+  }
+
+
+  .Dot{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: #3b1e0c;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .Aktiv, .Dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+//------------------------------------SlideShow----------------------------//
+
+
+.flex {
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+  .flex div {
+  width: 33.33%;
+  }
+
+  .flex div img {
+    width:100%;
+    height:500px;
+    object-fit: cover;
+    padding-top: 15%;
+
+  }
+
+  .flex div div {
+    width:100%;
+    height:200px;
+    padding:10px;
+  }
+
+  .flex div div h1 {
+    color: #3b1e0c;
+    font-family: "Futura PT";
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  .flex div div h3 {
+    color: #3b1e0c;
+    font-family: "Futura PT";
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+
+    padding-top: 30px;
+  }
+
+  .flex div div p {
+    color: #3b1e0c;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    line-height: 30px;
+    padding-top: 30px;
+  }
+
+
+  .link{
+    text-decoration: none;
+  }
+  //------------------------footer web-------------------------//
+   .footer_mobil{
+     display: none;
+   }
+   
+   .footer_web{
+     display: -webkit-flex;
+     display: flex;
+     justify-content: space-around;
+     width: 100%;
+     background-color: #cebba6;
+     border-top: 5px solid #3b1e0c;
+     margin-top: 70%;
+     padding-bottom: 2%;
+     color: #3b1e0c;
+   }
+   
+   .foverskrift{
+     width: 150px;
+     height: 30px;
+     background-color: #3b1919;
+     color: #ebe3d9;
+     text-align: center;
+     border-radius: 8px;
+     font-size: 14pt;
+     padding: 5% 0 5% 0;
+     margin-top: 25%;
+   }
+   
+   .kon{
+     padding-top: 4%;
+   }
+   
+   .findoson{
+     flex-direction: column;
+   }
+   
+   .mellemrum{
+     padding-top: 6%;
+   }
+   
+   .sometekst{
+     font-size: 14pt;
+     color: #3b1e0c;
+     padding-top: 5%;
+     text-align: start;
+   }
+   
+   .flex_some{
+     display: -webkit-flex;
+     display: flex;
+     justify-content: space-around;
+   }
+   
+   .fa-facebook-official, .fa-instagram, .fa-pinterest{
+     color: #3b1e0c;
+     margin-left: -10%;
+   }
+   
+   .pin{
+    padding-right: 5%;
+    margin-right: 7%;
+   }
+
+}
+
+@media print {
+  // Alt der gælder for print specifikt
+}
+
+
+
+
+
+
